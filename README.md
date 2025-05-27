@@ -1,6 +1,6 @@
 # 🛒 Food Ordering App
 
-A responsive mini food ordering web app featuring **product listing**, **shopping cart**, **discounts**, and **order placement** functionalities. This project integrates with a **demo e-commerce API** based on an OpenAPI 3.1 spec.
+A responsive mini food ordering web app featuring **product listing**, **shopping cart**, **discounts**, and **order placement** functionalities.
 
 Built using **React**, **Tailwind CSS**, and **Zustand** for state management.
 
@@ -18,19 +18,13 @@ Built using **React**, **Tailwind CSS**, and **Zustand** for state management.
 ✅ Order Confirmation  
 ✅ Responsive Design  
 ✅ Interactive Hover/Focus States  
-✅ Accessible (WCAG compliant)  
 
 ---
-
-## 🚀 Live Demo
-
-**[View the Live App Here](#)**
 
 ## 🛠️ Tech Stack
 
 - **Frontend:** React + Tailwind CSS + Vite
 - **State Management:** Zustand
-- **API:** [Demo E-commerce API](https://orderfoodonline.deno.dev/api)
 - **Typography:** [Red Hat Text](https://fonts.google.com/specimen/Red+Hat+Text)
 - **Design:** Figma (Responsive for Mobile: 375px & Desktop: 1440px)
 
@@ -38,14 +32,16 @@ Built using **React**, **Tailwind CSS**, and **Zustand** for state management.
 
 ## 📂 Project Structure
 
+```bash
 src/
-├── components/ # Reusable UI components
-├── pages/ # Page components (Products, Cart, NotFound)
-├── store/ # Zustand store for cart management
-├── utils/ # Utility functions (e.g., discounts)
-├── config/ # Config files (e.g., coupons)
-├── App.jsx # App entry point
-└── main.jsx # React root
+├── components/    # Reusable UI components (e.g., ProductCard, CartItem, Button)
+├── pages/         # Page components (e.g., ProductsPage, CartPage, NotFoundPage)
+├── store/         # Zustand store for cart and coupon state management
+├── utils/         # Utility functions (e.g., discount calculations, helpers)
+├── config/        # Config files (e.g., coupon definitions)
+├── App.jsx        # App entry point and router setup
+└── main.jsx       # React DOM entry point (renders App)
+
 
 
 ## 📦 Getting Started
