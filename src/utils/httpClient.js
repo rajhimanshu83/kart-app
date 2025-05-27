@@ -1,3 +1,5 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
 /**
  * _clientService
  * Client for remote service integration
@@ -113,7 +115,7 @@ function APIClient({ path = "", headers = {}, payload }) {
       ...headers,
     },
     payload,
-    baseUrl: "/api",
+    baseUrl: API_URL,
   });
 }
 
