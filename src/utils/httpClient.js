@@ -1,4 +1,3 @@
-const API_URL = import.meta.env.VITE_API_URL;
 
 /**
  * _clientService
@@ -115,7 +114,7 @@ function APIClient({ path = "", headers = {}, payload }) {
       ...headers,
     },
     payload,
-    baseUrl: API_URL,
+    baseUrl: "/api",
   });
 }
 
