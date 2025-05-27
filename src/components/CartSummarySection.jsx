@@ -50,7 +50,7 @@ export const CartSummarySection = ({
   return (
     <div className="w-full lg:w-96 flex flex-shrink-0">
       <div className="flex flex-col p-6 max-w-md w-full bg-white">
-        <h2 className="text-2xl font-semibold text-[#BD7765] mb-6">
+        <h2 className="text-2xl font-semibold text-center text-[#BD7765] mb-6">
           Your Cart ({cartItemCount})
         </h2>
 

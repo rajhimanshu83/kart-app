@@ -8,7 +8,7 @@ const OrderSummarySection = ({ orderItems, startNewOrder, finalOrderPrice }) => 
         rounded-xl
         shadow-2xl
         p-4 sm:p-6 md:p-8 lg:p-10
-        max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl
+        md:max-w-lg lg:max-w-xl
         w-full
         flex flex-col
         space-y-4 sm:space-y-6
