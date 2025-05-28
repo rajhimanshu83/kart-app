@@ -1,19 +1,28 @@
 import { AddToCartButton } from "./AddToCartButton";
 import { QuantityCounter } from "./QuantityCounter";
 
-export const ProductCard = ({ product, onAddToCart, updateQuantity, cartItems, screenSize }) => {
+export const ProductCard = ({
+  product,
+  onAddToCart,
+  updateQuantity,
+  cartItems,
+}) => {
   const existingCartItem = cartItems.find((item) => item.id === product.id);
 
   return (
     <div className="relative w-full max-w-sm mx-auto hover:shadow-xl overflow-hidden flex flex-col transform transition duration-300 hover:scale-105 rounded-xl">
       <div className="relative w-full pb-[75%] sm:pb-[100%] overflow-hidden">
-        <img
-          src={product.image[screenSize]}
-          alt={product.name}
-          className={`absolute inset-0 w-full h-full object-cover rounded-xl ${
-            existingCartItem ? "border-2 border-[#C63B0F]" : ""
-          }`}
-        />
+        <picture className="absolute top-0 left-0 w-full h-full">
+          <source media="(min-width: 1024px)" srcSet={product.image.desktop} />
+          <source media="(min-width: 640px)" srcSet={product.image.tablet} />
+          <img
+            src={product.image.mobile}
+            alt={product.name}
+            className={`w-full h-full object-fit rounded-xl ${
+              existingCartItem ? "border-2 border-[#C63B0F]" : ""
+            }`}
+          />
+        </picture>
       </div>
 
       {/* Details */}
@@ -31,7 +40,9 @@ export const ProductCard = ({ product, onAddToCart, updateQuantity, cartItems, s
           />
         )}
 
-        <p className="text-xs sm:text-sm text-[#B5A8A5] mb-1">{product.category}</p>
+        <p className="text-xs sm:text-sm text-[#B5A8A5] mb-1">
+          {product.category}
+        </p>
         <p className="text-sm sm:text-base md:text-base font-semibold text-[#665A57] mb-1">
           {product.name}
         </p>

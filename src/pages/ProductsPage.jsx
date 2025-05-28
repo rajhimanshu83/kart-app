@@ -109,9 +109,15 @@ function ProductsPage() {
         </div>
       </div>
 
-      <FloatingCartBtn setIsCartModalOpen={setIsCartModalOpen} getTotalItems={getTotalItems} />
+      <FloatingCartBtn
+        setIsCartModalOpen={setIsCartModalOpen}
+        getTotalItems={getTotalItems}
+      />
 
-      <BottomDrawer isOpen={isCartModalOpen} onClose={() => setIsCartModalOpen(false)}>
+      <BottomDrawer
+        isOpen={isCartModalOpen}
+        onClose={() => setIsCartModalOpen(false)}
+      >
         <CartSummarySection
           cartItems={cartItems}
           getTotalPrice={getTotalPrice}
@@ -128,7 +134,10 @@ function ProductsPage() {
       </BottomDrawer>
 
       {screenSize === "mobile" ? (
-        <BottomDrawer isOpen={isOrderSuccessful} onClose={() => setIsOrderSuccessful(false)}>
+        <BottomDrawer
+          isOpen={isOrderSuccessful}
+          onClose={() => setIsOrderSuccessful(false)}
+        >
           <OrderSummarySection
             orderItems={finalOrderItems}
             startNewOrder={startNewOrder}
@@ -136,7 +145,10 @@ function ProductsPage() {
           />
         </BottomDrawer>
       ) : (
-        <PopUpModal isOpen={isOrderSuccessful} onClose={() => setIsOrderSuccessful(false)}>
+        <PopUpModal
+          isOpen={isOrderSuccessful}
+          onClose={() => setIsOrderSuccessful(false)}
+        >
           <OrderSummarySection
             orderItems={finalOrderItems}
             startNewOrder={startNewOrder}

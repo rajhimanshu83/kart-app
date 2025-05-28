@@ -1,4 +1,3 @@
-import { useScreenSize } from "../hooks/useScreenSize";
 import { ProductCard } from "./ProductCard";
 import { ProductGridSkeleton } from "./ProductGridSkeleton";
 
@@ -9,7 +8,7 @@ const ProductGridSection = ({
   updateQuantity,
   isLoading,
 }) => {
-  const screenSize = useScreenSize();
+  const skeletonCount = 6; // Match your grid columns
 
   return (
     <div className="flex-grow w-full">
@@ -17,26 +16,26 @@ const ProductGridSection = ({
         Desserts
       </p>
 
-      <div className="min-h-[400px]">
-        {isLoading ? (
-          <ProductGridSkeleton />
-        ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-            {products.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                onAddToCart={onAddToCart}
-                cartItems={cartItems}
-                updateQuantity={updateQuantity}
-                screenSize={screenSize}
-              />
-            ))}
-          </div>
-        )}
+      <div className="min-h-[600px]">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+          {isLoading
+            ? Array(skeletonCount)
+                .fill(0)
+                .map((_, i) => <ProductGridSkeleton key={i} />)
+            : products.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  onAddToCart={onAddToCart}
+                  cartItems={cartItems}
+                  updateQuantity={updateQuantity}
+                />
+              ))}
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default ProductGridSection;
