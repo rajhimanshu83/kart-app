@@ -1,8 +1,11 @@
 # 🛒 Food Ordering App
 
-A responsive mini food ordering web app featuring **product listing**, **shopping cart**, **discounts**, and **order placement** functionalities.
+A modern and responsive food ordering application built with React, Tailwind CSS, and custom components.
 
-Built using **React**, **Tailwind CSS**, and **Zustand** for state management.
+## 🚀 Live Demo
+
+The app is deployed and available here:  
+👉 [Link](https://kart-app-nine.vercel.app/)  
 
 ---
 
@@ -42,7 +45,7 @@ src/
 ├── App.jsx        # App entry point and router setup
 └── main.jsx       # React DOM entry point (renders App)
 
-
+```
 
 ## 📦 Getting Started
 

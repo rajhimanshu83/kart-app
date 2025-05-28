@@ -17,7 +17,7 @@ export const ProductCard = ({ product, onAddToCart, updateQuantity, cartItems, s
       </div>
 
       {/* Details */}
-      <div className="relative flex flex-col p-4 pt-12 sm:pt-16 min-h-[120px] justify-end text-left">
+      <div className="relative flex flex-col p-4 pt-9 sm:pt-9 min-h-[120px] justify-end text-left">
         {existingCartItem ? (
           <QuantityCounter
             productId={product.id}
@@ -32,10 +32,10 @@ export const ProductCard = ({ product, onAddToCart, updateQuantity, cartItems, s
         )}
 
         <p className="text-xs sm:text-sm text-[#B5A8A5] mb-1">{product.category}</p>
-        <p className="text-sm sm:text-base md:text-lg font-semibold text-[#665A57] mb-2">
+        <p className="text-sm sm:text-base md:text-base font-semibold text-[#665A57] mb-1">
           {product.name}
         </p>
-        <p className="text-base sm:text-lg md:text-xl font-bold text-[#BD7765] mt-auto">
+        <p className="text-base sm:text-base md:text-base font-semibold text-[#BD7765] mt-auto">
           ${product.price.toFixed(2)}
         </p>
       </div>

@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+html {
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+:root {
+  --font-sans: 'Red Hat Text', sans-serif;
+}
