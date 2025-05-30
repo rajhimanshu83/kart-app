@@ -78,13 +78,13 @@ const CartSummarySection = ({
                       {item.quantity}x
                     </span>
                     <span className="text-[#B2A8A6] font-semibold">
-                      @${item.price.toFixed(2)} = $
+                      @${item.price.toFixed(2)}   $
                       {(item.quantity * item.price).toFixed(2)}
                     </span>
                   </div>
                   <button
                     onClick={() => removeItem(item.id)}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 hover:scale-110 transition"
+                    className="absolute cursor-pointer right-2 top-1/2 -translate-y-1/2 hover:scale-110 transition"
                     aria-label="Remove item"
                   >
                     <img src={CrossIcon} alt="Remove" className="h-5 w-5" />
@@ -109,7 +109,7 @@ const CartSummarySection = ({
                 </p>
                 <button
                   onClick={handleRemoveCoupon}
-                  className="text-red-500 text-xs font-semibold hover:underline hover:scale-105"
+                  className="text-red-500 cursor-pointer text-xs font-semibold hover:underline hover:scale-105"
                 >
                   Remove
                 </button>
@@ -132,7 +132,7 @@ const CartSummarySection = ({
                   />
                   <button
                     onClick={onCouponApplyClicked}
-                    className="hover:scale-105 bg-[#BD7765] text-white px-4 py-2 rounded-md text-sm"
+                    className="hover:scale-105 cursor-pointer bg-[#BD7765] text-white px-4 py-2 rounded-md text-sm"
                   >
                     Apply
                   </button>
@@ -152,7 +152,7 @@ const CartSummarySection = ({
 
             <button
               onClick={onCreateOrder}
-              className="hover:scale-105 bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-8 mt-8 rounded-full shadow-md transition-all w-full"
+              className="hover:scale-105 cursor-pointer bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-8 mt-8 rounded-full shadow-md transition-all w-full"
             >
               Confirm Order
             </button>
