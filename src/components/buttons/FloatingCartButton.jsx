@@ -1,4 +1,4 @@
-export default function FloatingCartBtn({ setIsCartModalOpen, getTotalItems }) {
+export default function FloatingCartButton({ setIsCartModalOpen, getTotalItems }) {
   return (
     <button
       className="fixed bottom-4 right-4 bg-[#BD7765] text-white p-4 rounded-full shadow-lg lg:hidden z-50 flex items-center justify-center"

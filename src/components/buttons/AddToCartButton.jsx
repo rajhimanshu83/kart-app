@@ -1,4 +1,4 @@
-import AddToCartIcon from "../assets/icons/add-to-cart-icon.png";
+import AddToCartIcon from "../../assets/icons/add-to-cart-icon.png";
 
 export const AddToCartButton = ({ onClick, productName }) => (
   <button

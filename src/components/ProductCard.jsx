@@ -1,5 +1,5 @@
-import { AddToCartButton } from "./AddToCartButton";
-import { QuantityCounter } from "./QuantityCounter";
+import { AddToCartButton } from "./buttons/AddToCartButton";
+import { QuantityCounterButton } from "./buttons/QuantityCounterButton";
 
 export const ProductCard = ({
   product,
@@ -28,7 +28,7 @@ export const ProductCard = ({
       {/* Details */}
       <div className="relative flex flex-col p-4 pt-9 sm:pt-9 min-h-[120px] justify-end text-left">
         {existingCartItem ? (
-          <QuantityCounter
+          <QuantityCounterButton
             productId={product.id}
             quantity={existingCartItem.quantity}
             updateQuantity={updateQuantity}

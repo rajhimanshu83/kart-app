@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import ProductsLayout from "../layout/ProductsLayout";
 import ProductGridSection from "../components/ProductGridSection";
 import CartSummarySection from "../components/CartSummarySection";
-import FloatingCartBtn from "../components/FloatingCartBtn";
+import FloatingCartButton from "../components/buttons/FloatingCartButton";
 import { BottomDrawer } from "../components/BottomDrawer";
 import { PopUpModal } from "../components/PopUpModal";
 import OrderSummarySection from "../components/OrderSummarySection";
@@ -109,7 +109,7 @@ function ProductsPage() {
         </div>
       </div>
 
-      <FloatingCartBtn
+      <FloatingCartButton
         setIsCartModalOpen={setIsCartModalOpen}
         getTotalItems={getTotalItems}
       />
