@@ -2,6 +2,7 @@ import { useState } from "react";
 import EmptyCartIcon from "../assets/icons/empty-cart-icon.png";
 import CrossIcon from "../assets/icons/cross-icon.png";
 import TreeIcon from "../assets/icons/tree-icon.png";
+import { CartSummarySkeleton } from "./CartSummarySkeleton";
 
 const CartSummarySection = ({
   cartItems = [],
@@ -13,6 +14,7 @@ const CartSummarySection = ({
   handleApplyCoupon,
   getDiscountedPrice,
   resetCoupon,
+  isLoading
 }) => {
   const [couponCodeInput, setCouponCodeInput] = useState("");
   const [couponErrorMsg, setCouponErrorMsg] = useState("");
@@ -52,6 +54,19 @@ const CartSummarySection = ({
       </p>
     </div>
   );
+
+  const renderLoadingCart = () => {
+    return (    <div className="w-full lg:w-96 flex flex-shrink-0 justify-center">
+      <div className="flex flex-col p-6 w-full bg-white rounded-lg shadow-sm transition-all">
+        <CartSummarySkeleton/>
+      </div>
+      </div>
+      )
+  }
+
+  if(isLoading) {
+    return renderLoadingCart();
+  }
 
   return (
     <div className="w-full lg:w-96 flex flex-shrink-0 justify-center">

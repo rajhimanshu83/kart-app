@@ -13,7 +13,8 @@ import { useProducts } from "../hooks/useProducts";
 import { useCart } from "../hooks/useCart";
 
 function ProductsPage() {
-  const { products, isLoading: productsLoading } = useProducts();
+
+  const { products, isProductsLoading: productsLoading, error } = useProducts();
 
   const {
     cartItems,
@@ -78,7 +79,7 @@ function ProductsPage() {
   }, []);
 
   return (
-    <ProductsLayout>
+    <ProductsLayout error={error}>
       <div className="grid lg:grid-cols-12 gap-6">
         <div className="lg:col-span-8">
           <ProductGridSection
